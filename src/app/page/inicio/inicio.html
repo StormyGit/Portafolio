@@ -414,6 +414,38 @@
 
               <!-- LINK -->
 
+              <div
+                class="mt-6 border-t border-white/5 pt-5"
+              >
+
+                <!--
+                  Por ahora lo mandamos a la página general.
+                  Luego lo cambiamos por /proyectos/:slug
+                -->
+
+                <a
+                [routerLink]="[
+                  '/portafolio/proyectos',
+                  project.id
+                ]"
+                  class="group/link inline-flex items-center
+                         gap-2 text-sm font-semibold
+                         text-slate-300 transition
+                         hover:text-violet-400"
+                >
+                  Ver proyecto
+
+                  <span
+                    class="transition-transform
+                           group-hover/link:translate-x-1"
+                  >
+                    →
+                  </span>
+
+                </a>
+
+              </div>
+
             </div>
 
           </article>
