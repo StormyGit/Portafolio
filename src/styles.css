@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+
+.bck_meow {
+  background-color: #020617;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #020617 100px
+    ),
+    repeating-linear-gradient(
+      #200a4633,
+      #0c1d4122
+    );
+}

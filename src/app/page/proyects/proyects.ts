@@ -34,9 +34,10 @@ export class Proyects {
       image: 'images/proyect/bibliotecaInfop_cover.png',
       slug: 'biblioteca-infop',
       technologies: [
-        'Angular',
-        'API REST',
-        'Base de datos'
+        ' PHP - laravel',
+        ' NODE.js',
+        ' MySQL',
+        'bootstrap'
       ]
     },
 
@@ -49,8 +50,10 @@ export class Proyects {
       image: 'images/proyect/diciht_cover.png',
       slug: 'becas-unah',
       technologies: [
-        'Desarrollo Web',
-        'Base de datos'
+        'Angular',
+        'NODE.js',
+        'SQL Serve',
+        'PrimeNG'
       ]
     },
 
@@ -63,9 +66,10 @@ export class Proyects {
       image: 'images/proyect/celaque_cover.jpeg',
       slug: 'red-social-celaque',
       technologies: [
-        'Frontend',
-        'Backend',
-        'API REST'
+        'Angular',
+        'Spring Boot',
+        'postgresql',
+        'tailwind'
       ]
     },
 
@@ -78,8 +82,10 @@ export class Proyects {
       image: 'images/proyect/ICF-cover.png',
       slug: 'automatizacion-icf',
       technologies: [
-        'Automatización',
-        'Backend'
+        'PHP - Laravel',
+        'Spring Boot',
+        'MySQL',
+        'tailwind'
       ]
     },
 
@@ -94,7 +100,9 @@ export class Proyects {
       technologies: [
         'Angular',
         'Ionic',
-        'Spring Boot'
+        'Spring Boot',
+        'postgresql',
+        'tailwind'
       ]
     }
 
