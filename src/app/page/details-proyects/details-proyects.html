@@ -1,0 +1,536 @@
+@if (project) {
+
+  <section class="relative min-h-screen">
+
+    <!-- ================================ -->
+    <!-- BACKGROUND -->
+    <!-- ================================ -->
+
+    <div
+      class="pointer-events-none absolute left-1/2 top-0 -z-10
+             h-[500px] w-[800px] -translate-x-1/2
+             rounded-full bg-violet-600/10 blur-[150px]"
+    ></div>
+
+
+    <div
+      class="mx-auto max-w-7xl px-5 py-16
+             sm:px-6 lg:px-8 lg:py-24"
+    >
+
+      <!-- ================================ -->
+      <!-- VOLVER -->
+      <!-- ================================ -->
+
+      <a
+        routerLink="/portafolio/proyectos"
+        class="group inline-flex items-center gap-2
+               text-sm text-slate-400 transition
+               hover:text-white"
+      >
+
+        <span
+          class="transition-transform
+                 group-hover:-translate-x-1"
+        >
+          ←
+        </span>
+
+        Volver a proyectos
+
+      </a>
+
+
+      <!-- ================================ -->
+      <!-- HEADER -->
+      <!-- ================================ -->
+
+      <div
+        class="mt-10 grid gap-12
+               lg:grid-cols-[1.05fr_0.95fr]
+               lg:items-center"
+      >
+
+        <!-- TEXT -->
+
+        <div>
+
+          <div class="flex flex-wrap items-center gap-3">
+
+            <span
+              class="rounded-full border border-violet-500/20
+                     bg-violet-500/10 px-3 py-1
+                     text-xs font-medium text-violet-400"
+            >
+              Proyecto
+            </span>
+
+            <span class="text-sm text-slate-500">
+              {{ project.startDate }}
+              —
+              {{ project.endDate }}
+            </span>
+
+          </div>
+
+
+          <h1
+            class="mt-6 text-4xl font-bold tracking-tight
+                   text-white sm:text-5xl lg:text-6xl"
+          >
+            {{ project.name }}
+          </h1>
+
+
+          <p
+            class="mt-4 text-lg font-medium
+                   text-violet-400"
+          >
+            {{ project.company }}
+          </p>
+
+
+          <p
+            class="mt-7 max-w-2xl text-base
+                   leading-8 text-slate-400
+                   sm:text-lg"
+          >
+            {{ project.description }}
+          </p>
+
+
+          <!-- TECHNOLOGIES -->
+
+          <div class="mt-8 flex flex-wrap gap-2">
+
+            @for (
+              technology of project.technologies;
+              track technology
+            ) {
+
+              <span
+                class="rounded-lg border border-white/10
+                       bg-white/5 px-3 py-1.5
+                       text-xs font-medium
+                       text-slate-300"
+              >
+                {{ technology }}
+              </span>
+
+            }
+
+          </div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div
+          class="overflow-hidden rounded-3xl
+                 border border-white/10
+                 bg-slate-900/50 p-2
+                 shadow-2xl shadow-black/20"
+        >
+
+          <img
+            [src]="project.image"
+            [alt]="project.name"
+            class="aspect-[16/10] w-full
+                   rounded-2xl object-cover"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================ -->
+      <!-- PROJECT INFORMATION -->
+      <!-- ================================ -->
+
+      <div
+        class="mt-24 grid gap-8 lg:grid-cols-[1fr_320px]"
+      >
+
+        <!-- LEFT -->
+
+        <div class="space-y-8">
+
+          <!-- DESCRIPTION -->
+
+          <article
+            class="rounded-2xl border border-white/10
+                   bg-slate-900/30 p-6 sm:p-8"
+          >
+
+            <div
+              class="mb-6 flex size-11 items-center
+                     justify-center rounded-xl
+                     bg-violet-500/10
+                     text-violet-400"
+            >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 4h16v16H4z"/>
+                <path d="M8 9h8"/>
+                <path d="M8 13h6"/>
+              </svg>
+
+            </div>
+
+
+            <p
+              class="text-xs font-semibold uppercase
+                     tracking-[0.2em]
+                     text-violet-400"
+            >
+              Proyecto
+            </p>
+
+            <h2
+              class="mt-2 text-2xl font-semibold
+                     text-white"
+            >
+              Descripción
+            </h2>
+
+
+            <p
+              class="mt-5 leading-8 text-slate-400"
+            >
+              {{ project.description }}
+            </p>
+
+          </article>
+
+
+          <!-- FUNCTIONALITY -->
+
+          <article
+            class="rounded-2xl border border-white/10
+                   bg-slate-900/30 p-6 sm:p-8"
+          >
+
+            <p
+              class="text-xs font-semibold uppercase
+                     tracking-[0.2em]
+                     text-violet-400"
+            >
+              Características
+            </p>
+
+            <h2
+              class="mt-2 text-2xl font-semibold
+                     text-white"
+            >
+              Responsabilidades y aportes
+            </h2>
+
+
+            <div
+              class="mt-7 grid gap-4
+                     sm:grid-cols-2"
+            >
+
+              @for (
+                functionality of project.functionality;
+                track functionality
+              ) {
+
+                <div
+                  class="flex gap-4 rounded-xl
+                         border border-white/5
+                         bg-white/[0.025]
+                         p-4"
+                >
+
+                  <div
+                    class="mt-0.5 flex size-7
+                           shrink-0 items-center
+                           justify-center rounded-full
+                           bg-violet-500/10
+                           text-sm text-violet-400"
+                  >
+                    ✓
+                  </div>
+
+                  <p
+                    class="text-sm leading-6
+                           text-slate-300"
+                  >
+                    {{ functionality }}
+                  </p>
+
+                </div>
+
+              }
+
+            </div>
+
+          </article>
+
+
+          <!-- PHASES -->
+
+          @if (project.phases?.length) {
+
+            <article
+              class="rounded-2xl border border-white/10
+                     bg-slate-900/30 p-6 sm:p-8"
+            >
+
+              <p
+                class="text-xs font-semibold uppercase
+                       tracking-[0.2em]
+                       text-violet-400"
+              >
+                Desarrollo
+              </p>
+
+              <h2
+                class="mt-2 text-2xl font-semibold
+                       text-white"
+              >
+                Fases del proyecto
+              </h2>
+
+
+              <div class="mt-8">
+
+                @for (
+                  phase of project.phases;
+                  track phase;
+                  let i = $index
+                ) {
+
+                  <div class="flex gap-5">
+
+                    <!-- TIMELINE -->
+
+                    <div
+                      class="flex flex-col items-center"
+                    >
+
+                      <div
+                        class="flex size-9 items-center
+                               justify-center rounded-full
+                               border border-violet-500/30
+                               bg-violet-500/10
+                               text-xs font-semibold
+                               text-violet-400"
+                      >
+                        {{ i + 1 }}
+                      </div>
+
+                      @if (
+                        i < (project.phases?.length ?? 0) - 1
+                      ) {
+
+                        <div
+                          class="h-10 w-px
+                                 bg-white/10"
+                        ></div>
+
+                      }
+
+                    </div>
+
+
+                    <p
+                      class="pt-2 text-sm
+                             text-slate-300"
+                    >
+                      {{ phase }}
+                    </p>
+
+                  </div>
+
+                }
+
+              </div>
+
+            </article>
+
+          }
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- SIDEBAR -->
+        <!-- ================================= -->
+
+        <aside>
+
+          <div
+            class="sticky top-28 rounded-2xl
+                   border border-white/10
+                   bg-slate-900/40 p-6"
+          >
+
+            <h3
+              class="text-lg font-semibold text-white"
+            >
+              Información
+            </h3>
+
+
+            <div
+              class="mt-6 divide-y
+                     divide-white/5"
+            >
+
+              <!-- COMPANY -->
+
+              <div class="py-4 first:pt-0">
+
+                <p
+                  class="text-xs uppercase
+                         tracking-wider
+                         text-slate-500"
+                >
+                  Organización
+                </p>
+
+                <p
+                  class="mt-2 text-sm
+                         font-medium text-slate-200"
+                >
+                  {{ project.company }}
+                </p>
+
+              </div>
+
+
+              <!-- DATE -->
+
+              <div class="py-4">
+
+                <p
+                  class="text-xs uppercase
+                         tracking-wider
+                         text-slate-500"
+                >
+                  Periodo
+                </p>
+
+                <p
+                  class="mt-2 text-sm
+                         font-medium text-slate-200"
+                >
+                  {{ project.startDate }}
+                </p>
+
+                <p
+                  class="mt-1 text-sm text-slate-500"
+                >
+                  hasta {{ project.endDate }}
+                </p>
+
+              </div>
+
+
+              <!-- TECHNOLOGIES -->
+
+              <div class="py-4">
+
+                <p
+                  class="text-xs uppercase
+                         tracking-wider
+                         text-slate-500"
+                >
+                  Tecnologías
+                </p>
+
+                <div
+                  class="mt-3 flex flex-wrap gap-2"
+                >
+
+                  @for (
+                    technology of project.technologies;
+                    track technology
+                  ) {
+
+                    <span
+                      class="rounded-md bg-white/5
+                             px-2.5 py-1
+                             text-xs text-slate-400"
+                    >
+                      {{ technology }}
+                    </span>
+
+                  }
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+  </section>
+
+} @else {
+
+  <!-- ================================= -->
+  <!-- NOT FOUND -->
+  <!-- ================================= -->
+
+  <section
+    class="flex min-h-[70vh]
+           items-center justify-center px-5"
+  >
+
+    <div class="text-center">
+
+      <p
+        class="text-sm font-medium
+               text-violet-400"
+      >
+        Proyecto no encontrado
+      </p>
+
+      <h1
+        class="mt-3 text-4xl font-bold
+               text-white"
+      >
+        Este proyecto no existe
+      </h1>
+
+      <p
+        class="mt-4 text-slate-400"
+      >
+        No encontramos un proyecto con ese ID.
+      </p>
+
+      <a
+        routerLink="/portafolio/proyectos"
+        class="mt-8 inline-flex rounded-xl
+               bg-violet-600 px-6 py-3
+               text-sm font-semibold text-white
+               transition hover:bg-violet-500"
+      >
+        Volver a proyectos
+      </a>
+
+    </div>
+
+  </section>
+
+}

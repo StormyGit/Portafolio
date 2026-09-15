@@ -15,3 +15,23 @@
       #0c1d4122
     );
 }
+
+.bck_paws {
+  background-color: #b021d4;
+
+  background-image:
+    radial-gradient(
+      circle at center center,
+      #0e051d,
+      #020617
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      #0c1d41,
+      #0c1d41 5px,
+      transparent 20px,
+      transparent 10px
+    );
+
+  background-blend-mode: multiply;
+}
