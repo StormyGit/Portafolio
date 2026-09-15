@@ -1,1 +1,564 @@
-hola mundo
+<section class="relative overflow-hidden">
+
+  <!-- ===================================================== -->
+  <!-- FONDO DECORATIVO -->
+  <!-- ===================================================== -->
+
+  <div
+    class="pointer-events-none absolute left-1/2 top-0 -z-10
+           h-[600px] w-[900px] -translate-x-1/2
+           rounded-full bg-violet-600/10 blur-[150px]"
+  ></div>
+
+
+  <!-- ===================================================== -->
+  <!-- HERO -->
+  <!-- ===================================================== -->
+
+  <div
+    class="mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl
+           items-center gap-14 px-5 py-20
+           sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8"
+  >
+
+    <!-- ========================= -->
+    <!-- TEXTO -->
+    <!-- ========================= -->
+
+    <div>
+
+      <!-- SALUDO -->
+
+      <div
+        class="mb-6 inline-flex items-center gap-2 rounded-full
+               border border-white/10 bg-white/5
+               px-4 py-2 text-sm text-slate-300"
+      >
+
+        <span
+          class="size-2 rounded-full bg-emerald-400
+                 shadow-[0_0_10px_rgba(52,211,153,0.8)]"
+        ></span>
+
+        Hola, soy Daniel López
+
+      </div>
+
+
+      <!-- TITULO -->
+
+      <h1
+        class="max-w-4xl text-5xl font-bold tracking-tight
+               text-white sm:text-6xl lg:text-7xl"
+      >
+        Desarrollador de Software
+
+        <span
+          class="block bg-gradient-to-r from-violet-400
+                 via-purple-400 to-blue-400
+                 bg-clip-text text-transparent"
+        >
+          Full Stack
+        </span>
+      </h1>
+
+
+      <!-- DESCRIPCION -->
+
+      <p
+        class="mt-7 max-w-2xl text-base leading-8
+               text-slate-400 sm:text-lg"
+      >
+        Desarrollo aplicaciones web y móviles, sistemas de gestión
+        y soluciones orientadas a mejorar y automatizar procesos.
+        Me gusta transformar necesidades reales en software funcional,
+        organizado y mantenible.
+      </p>
+
+
+      <!-- BOTONES -->
+
+      <div class="mt-9 flex flex-wrap gap-4">
+
+        <a
+          routerLink="/portafolio/proyectos"
+          class="group inline-flex items-center gap-2
+                 rounded-xl bg-violet-600 px-6 py-3
+                 text-sm font-semibold text-white
+                 transition hover:bg-violet-500"
+        >
+
+          Ver proyectos
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform
+                   group-hover:translate-x-1"
+          >
+            <path d="M5 12h14"/>
+            <path d="m13 6 6 6-6 6"/>
+          </svg>
+
+        </a>
+
+
+        <a
+          routerLink="/portafolio/sobre-mi"
+          class="inline-flex items-center rounded-xl
+                 border border-white/10 px-6 py-3
+                 text-sm font-semibold text-slate-300
+                 transition hover:border-white/20
+                 hover:bg-white/5 hover:text-white"
+        >
+          Sobre mí
+        </a>
+
+      </div>
+
+
+      <!-- STACK RAPIDO -->
+
+      <div
+        class="mt-12 flex flex-wrap items-center gap-3"
+      >
+
+        <span class="mr-2 text-xs text-slate-500">
+          Tecnologías:
+        </span>
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-3 py-1.5
+                 text-xs text-slate-400"
+        >
+          Angular
+        </span>
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-3 py-1.5
+                 text-xs text-slate-400"
+        >
+          TypeScript
+        </span>
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-3 py-1.5
+                 text-xs text-slate-400"
+        >
+          Spring Boot
+        </span>
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-3 py-1.5
+                 text-xs text-slate-400"
+        >
+          Laravel
+        </span>
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-3 py-1.5
+                 text-xs text-slate-400"
+        >
+          PostgreSQL
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- VISUAL -->
+    <!-- ========================= -->
+
+    <div
+      class="relative hidden items-center justify-center lg:flex"
+    >
+
+      <div
+        class="relative w-full max-w-[430px]
+               overflow-hidden rounded-3xl
+               border border-white/10
+               bg-slate-900/50 p-3
+               shadow-2xl shadow-black/30"
+      >
+
+        <div
+          class="overflow-hidden rounded-2xl
+                 border border-white/5 bg-slate-950"
+        >
+
+          <!-- Puedes cambiar esto después por tu foto -->
+
+          <div
+            class="flex aspect-[4/5] items-center
+                   justify-center bg-gradient-to-br
+                   from-slate-900 to-slate-950"
+          >
+
+            <div class="text-center">
+
+              <div
+                class="mx-auto flex size-28 items-center
+                       justify-center rounded-3xl
+                       bg-violet-600 text-4xl font-bold
+                       text-white shadow-xl
+                       shadow-violet-600/20"
+              >
+                DL
+              </div>
+
+              <p
+                class="mt-6 text-lg font-semibold text-white"
+              >
+                Daniel López
+              </p>
+
+              <p
+                class="mt-1 text-sm text-slate-500"
+              >
+                Software Developer
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD FLOTANTE -->
+
+        <div
+          class="absolute bottom-8 left-8 right-8
+                 rounded-2xl border border-white/10
+                 bg-slate-950/80 p-4 backdrop-blur-xl"
+        >
+
+          <div class="flex items-center gap-3">
+
+            <div
+              class="flex size-10 items-center justify-center
+                     rounded-xl bg-violet-500/10
+                     text-violet-400"
+            >
+              &lt;/&gt;
+            </div>
+
+            <div>
+
+              <p class="text-sm font-semibold text-white">
+                Desarrollo Full Stack
+              </p>
+
+              <p class="mt-0.5 text-xs text-slate-500">
+                Web · Mobile · APIs
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ===================================================== -->
+  <!-- PROYECTOS DESTACADOS -->
+  <!-- ===================================================== -->
+
+  <div
+    class="border-t border-white/5 bg-white/[0.01]"
+  >
+
+    <div
+      class="mx-auto max-w-7xl px-5 py-24
+             sm:px-6 lg:px-8 lg:py-28"
+    >
+
+      <!-- HEADER -->
+
+      <div
+        class="flex flex-col gap-6 md:flex-row
+               md:items-end md:justify-between"
+      >
+
+        <div class="max-w-2xl">
+
+          <p
+            class="text-sm font-semibold uppercase
+                   tracking-[0.25em] text-violet-400"
+          >
+            Mi trabajo
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-bold tracking-tight
+                   text-white sm:text-4xl"
+          >
+            Proyectos destacados
+          </h2>
+
+          <p
+            class="mt-4 leading-7 text-slate-400"
+          >
+            Algunos de los proyectos académicos y profesionales
+            en los que he tenido la oportunidad de participar.
+          </p>
+
+        </div>
+
+
+        <a
+          routerLink="/portafolio/proyectos"
+          class="group inline-flex items-center gap-2
+                 text-sm font-semibold text-slate-300
+                 transition hover:text-violet-400"
+        >
+          Ver todos los proyectos
+
+          <span
+            class="transition-transform
+                   group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </a>
+
+      </div>
+
+
+      <!-- ================================================= -->
+      <!-- CARDS -->
+      <!-- ================================================= -->
+
+      <div
+        class="mt-12 grid gap-7 md:grid-cols-2
+               lg:grid-cols-3"
+      >
+
+        @for (project of projects; track project.id) {
+
+          <article
+            class="group flex flex-col overflow-hidden
+                   rounded-2xl border border-white/10
+                   bg-slate-900/40
+                   transition duration-300
+                   hover:-translate-y-1
+                   hover:border-violet-500/30
+                   hover:bg-slate-900/70"
+          >
+
+            <!-- IMAGE -->
+
+            <div
+              class="relative aspect-[16/10]
+                     overflow-hidden bg-slate-900"
+            >
+
+              <img
+                [src]="project.image"
+                [alt]="project.name"
+                class="h-full w-full object-cover
+                       transition duration-500
+                       group-hover:scale-105"
+              />
+
+
+              <div
+                class="absolute inset-0
+                       bg-gradient-to-t
+                       from-slate-950/70
+                       via-transparent
+                       to-transparent"
+              ></div>
+
+
+              <!-- COMPANY -->
+
+              <span
+                class="absolute bottom-4 left-4
+                       rounded-lg border border-white/10
+                       bg-slate-950/80 px-3 py-1.5
+                       text-xs font-medium text-slate-300
+                       backdrop-blur"
+              >
+                {{ project.company }}
+              </span>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="flex flex-1 flex-col p-6">
+
+              <h3
+                class="text-xl font-semibold tracking-tight
+                       text-white"
+              >
+                {{ project.name }}
+              </h3>
+
+
+              <p
+                class="mt-4 flex-1 text-sm leading-7
+                       text-slate-400"
+              >
+                {{ project.description }}
+              </p>
+
+
+              <!-- TECHNOLOGIES -->
+
+              <div class="mt-6 flex flex-wrap gap-2">
+
+                @for (
+                  technology of project.technologies;
+                  track technology
+                ) {
+
+                  <span
+                    class="rounded-lg border border-white/5
+                           bg-white/5 px-2.5 py-1
+                           text-xs text-slate-400"
+                  >
+                    {{ technology }}
+                  </span>
+
+                }
+
+              </div>
+
+
+              <!-- LINK -->
+
+              <div
+                class="mt-6 border-t border-white/5 pt-5"
+              >
+
+                <!--
+                  Por ahora lo mandamos a la página general.
+                  Luego lo cambiamos por /proyectos/:slug
+                -->
+
+                <a
+                  routerLink="/portafolio/proyectos"
+                  class="group/link inline-flex items-center
+                         gap-2 text-sm font-semibold
+                         text-slate-300 transition
+                         hover:text-violet-400"
+                >
+                  Ver proyecto
+
+                  <span
+                    class="transition-transform
+                           group-hover/link:translate-x-1"
+                  >
+                    →
+                  </span>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ===================================================== -->
+  <!-- CTA FINAL -->
+  <!-- ===================================================== -->
+
+  <div
+    class="mx-auto max-w-7xl px-5 py-24
+           sm:px-6 lg:px-8"
+  >
+
+    <div
+      class="relative overflow-hidden rounded-3xl
+             border border-white/10
+             bg-gradient-to-br from-violet-600/10
+             via-slate-900/50 to-blue-600/5
+             px-6 py-14 text-center
+             sm:px-10 lg:py-16"
+    >
+
+      <div
+        class="absolute left-1/2 top-0
+               h-52 w-96 -translate-x-1/2
+               rounded-full bg-violet-500/10
+               blur-3xl"
+      ></div>
+
+
+      <div class="relative">
+
+        <p
+          class="text-sm font-medium text-violet-400"
+        >
+          Conoce mi trabajo
+        </p>
+
+        <h2
+          class="mx-auto mt-3 max-w-2xl
+                 text-3xl font-bold tracking-tight
+                 text-white sm:text-4xl"
+        >
+          Explora los proyectos en los que
+          he participado
+        </h2>
+
+        <p
+          class="mx-auto mt-5 max-w-xl
+                 leading-7 text-slate-400"
+        >
+          Puedes conocer más sobre cada proyecto,
+          las soluciones desarrolladas y las tecnologías
+          utilizadas.
+        </p>
+
+        <a
+          routerLink="/portafolio/proyectos"
+          class="mt-8 inline-flex items-center gap-2
+                 rounded-xl bg-white px-6 py-3
+                 text-sm font-semibold text-slate-950
+                 transition hover:bg-slate-200"
+        >
+          Explorar proyectos
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
