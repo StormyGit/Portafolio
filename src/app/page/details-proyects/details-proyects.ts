@@ -8,13 +8,15 @@ import {
   Project,
   ProyectsServices
 } from '../../services/proyects-services';
+import { ProjectGallery } from '../../components/project-gallery/project-gallery';
 
 @Component({
   selector: 'app-details-proyects',
 
   imports: [
-    RouterLink
-  ],
+    RouterLink,
+    ProjectGallery
+],
 
   templateUrl: './details-proyects.html',
   styleUrl: './details-proyects.css',

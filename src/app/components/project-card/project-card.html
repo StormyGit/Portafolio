@@ -1,0 +1,139 @@
+<article
+  class="group flex h-full flex-col overflow-hidden
+         rounded-2xl border border-white/10
+         bg-slate-900/40
+         transition duration-300
+         hover:-translate-y-1
+         hover:border-violet-500/30
+         hover:bg-slate-900/70"
+>
+
+  <!-- =============================== -->
+  <!-- IMAGE -->
+  <!-- =============================== -->
+
+  <div
+    class="relative aspect-[16/10]
+           overflow-hidden bg-slate-900"
+  >
+
+    <img
+      [src]="project.image"
+      [alt]="project.name"
+      class="h-full w-full object-cover
+             transition duration-500
+             group-hover:scale-105"
+    />
+
+
+    <!-- GRADIENT -->
+
+    <div
+      class="absolute inset-0
+             bg-gradient-to-t
+             from-slate-950/70
+             via-transparent
+             to-transparent"
+    ></div>
+
+
+    <!-- COMPANY -->
+
+    <span
+      class="absolute bottom-4 left-4
+             rounded-lg border border-white/10
+             bg-slate-950/80 px-3 py-1.5
+             text-xs font-medium text-slate-300
+             backdrop-blur"
+    >
+      {{ project.company }}
+    </span>
+
+  </div>
+
+
+  <!-- =============================== -->
+  <!-- CONTENT -->
+  <!-- =============================== -->
+
+  <div class="flex flex-1 flex-col p-6">
+
+    <!-- TITLE -->
+
+    <h3
+      class="text-xl font-semibold tracking-tight
+             text-white"
+    >
+      {{ project.name }}
+    </h3>
+
+
+    <!-- DESCRIPTION -->
+
+    <p
+      class="mt-4 flex-1 text-sm leading-7
+             text-slate-400"
+    >
+      {{ project.description }}
+    </p>
+
+
+    <!-- =============================== -->
+    <!-- TECHNOLOGIES -->
+    <!-- =============================== -->
+
+    <div class="mt-6 flex flex-wrap gap-2">
+
+      @for (
+        technology of project.technologies;
+        track technology
+      ) {
+
+        <span
+          class="rounded-lg border border-white/5
+                 bg-white/5 px-2.5 py-1
+                 text-xs text-slate-400"
+        >
+          {{ technology }}
+        </span>
+
+      }
+
+    </div>
+
+
+    <!-- =============================== -->
+    <!-- LINK -->
+    <!-- =============================== -->
+
+    <div
+      class="mt-6 border-t border-white/5 pt-5"
+    >
+
+      <a
+        [routerLink]="[
+          '/portafolio/proyectos',
+          project.id
+        ]"
+        class="group/link inline-flex items-center
+               gap-2 text-sm font-semibold
+               text-slate-300 transition
+               hover:text-violet-400"
+      >
+
+        Ver proyecto
+
+        <span
+          class="transition-transform
+                 group-hover/link:translate-x-1"
+        >
+          →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</article>

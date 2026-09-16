@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProyectsServices } from '../../services/proyects-services';
+import { ProjectCard } from '../../components/project-card/project-card';
 
 interface Project {
   id: number;
@@ -15,8 +16,9 @@ interface Project {
 @Component({
   selector: 'app-inicio',
   imports: [
-    RouterLink
-  ],
+    RouterLink,
+    ProjectCard
+],
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
 })

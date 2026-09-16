@@ -5,19 +5,22 @@ export interface Project {
   name: string;
   company: string;
   description: string;
-
   functionality: string[];
   phases?: string[];
-
   startDate: string;
   endDate: string;
-
   image: string;
   slug: string;
-
   technologies: string[];
-
   featured?: boolean;
+  capturas: Captura[];
+}
+
+export interface Captura {
+  id: number;
+  nombre?: string;
+  image: string;
+  descripcion?: string;
 }
 
 @Injectable({
@@ -57,7 +60,8 @@ private projects: Project[] = [
       'Node.js',
       'MySQL',
       'Bootstrap'
-    ]
+    ],
+    capturas:[]
   },
 
 
@@ -92,7 +96,44 @@ private projects: Project[] = [
       'SQL Server',
       'PrimeNG'
     ],
-    featured: true
+    featured: true,
+    capturas:[
+      {
+        id: 0,
+        nombre: 'Login de la plataforma',
+        image: 'images/proyect/diciht_cover.png',
+        descripcion:
+          ''
+      },
+      {
+        id: 1,
+        nombre: 'Creacion de formularios Dinamicos',
+        image: 'images/proyect/diciht_01.png',
+        descripcion:
+          ''
+      },
+      {
+        id: 1,
+        nombre: 'estructuracion del formulario dinamico antes de ser aprobado',
+        image: 'images/proyect/diciht_02.png',
+        descripcion:
+          ''
+      },
+      {
+        id: 1,
+        nombre: 'gestion y almacenamiendo de documento por solicitud',
+        image: 'images/proyect/diciht_04.png',
+        descripcion:
+          ''
+      },
+      {
+        id: 1,
+        nombre: 'Menu desplegable de mantenimiento',
+        image: 'images/proyect/diciht_05.png',
+        descripcion:
+          ''
+      },
+    ]
   },
 
 
@@ -126,7 +167,44 @@ private projects: Project[] = [
       'PostgreSQL',
       'Tailwind CSS'
     ],
-    featured: true
+    featured: true,
+    capturas:[
+      {
+        id: 0,
+        nombre: 'Login de la plataforma',
+        image: 'images/proyect/celaque_cover.jpeg',
+        descripcion:
+          ''
+      },
+      {
+        id: 1,
+        nombre: 'feed principal',
+        image: 'images/proyect/celaque_02.jpeg',
+        descripcion:
+          ''
+      },
+      {
+        id: 2,
+        nombre: 'Buscador de Usuarios',
+        image: 'images/proyect/celaque_01.jpeg',
+        descripcion:
+          ''
+      },
+      {
+        id: 2,
+        nombre: 'Vista de Resporte',
+        image: 'images/proyect/celaque_03.jpeg',
+        descripcion:
+          ''
+      },
+      {
+        id: 2,
+        nombre: 'Vista de denuncias',
+        image: 'images/proyect/celaque_04.jpeg',
+        descripcion:
+          ''
+      },
+    ]
   },
 
 
@@ -159,7 +237,8 @@ private projects: Project[] = [
       'Spring Boot',
       'MySQL',
       'Tailwind CSS'
-    ]
+    ],
+    capturas:[]
   },
 
 
@@ -194,7 +273,8 @@ private projects: Project[] = [
       'PostgreSQL',
       'Tailwind CSS'
     ],
-    featured: true
+    featured: true,
+    capturas:[]
   }
 
 ];

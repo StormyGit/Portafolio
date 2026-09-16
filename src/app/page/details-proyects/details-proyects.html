@@ -482,6 +482,20 @@
 
       </div>
 
+
+      <!-- ================================= -->
+      <!-- CAPTURAS DEL PROYECTO -->
+      <!-- ================================= -->
+
+      @if (project.capturas?.length) {
+
+        <app-project-gallery
+          [capturas]="project.capturas"
+        />
+
+      }
+
+
     </div>
 
   </section>

@@ -1,0 +1,279 @@
+@if (capturas.length > 0) {
+
+  <section class="mt-20">
+
+    <!-- ===================================== -->
+    <!-- TITLE -->
+    <!-- ===================================== -->
+
+    <div class="max-w-2xl">
+
+      <p
+        class="text-xs font-semibold uppercase
+               tracking-[0.2em] text-violet-400"
+      >
+        Vista del proyecto
+      </p>
+
+      <h2
+        class="mt-2 text-2xl font-semibold
+               text-white sm:text-3xl"
+      >
+        Capturas del sistema
+      </h2>
+
+      <p
+        class="mt-4 leading-7 text-slate-400"
+      >
+        Algunas vistas y funcionalidades desarrolladas
+        durante el proyecto.
+      </p>
+
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- GALLERY -->
+    <!-- ===================================== -->
+
+    <div
+      class="mt-10 grid gap-6
+             md:grid-cols-2 xl:grid-cols-3"
+    >
+
+      @for (captura of capturas; track captura.id) {
+
+        <article
+          class="group overflow-hidden rounded-2xl
+                 border border-white/10
+                 bg-slate-900/40"
+        >
+
+          <!-- IMAGE -->
+
+          <button
+            type="button"
+            class="relative block w-full cursor-zoom-in
+                   overflow-hidden bg-slate-900
+                   text-left"
+            (click)="openModal(captura)"
+          >
+
+            <img
+              [src]="captura.image"
+              [alt]="captura.nombre ?? 'Captura del proyecto'"
+              class="aspect-[16/10] h-full w-full
+                     object-cover transition
+                     duration-500
+                     group-hover:scale-105"
+            />
+
+
+            <!-- OVERLAY -->
+
+            <div
+              class="absolute inset-0 flex items-center
+                     justify-center bg-slate-950/0
+                     transition duration-300
+                     group-hover:bg-slate-950/50"
+            >
+
+              <div
+                class="flex size-12 scale-75
+                       items-center justify-center
+                       rounded-full border border-white/10
+                       bg-slate-950/80
+                       text-white opacity-0
+                       backdrop-blur-md
+                       transition duration-300
+                       group-hover:scale-100
+                       group-hover:opacity-100"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.3-4.3"/>
+                  <path d="M11 8v6"/>
+                  <path d="M8 11h6"/>
+                </svg>
+
+              </div>
+
+            </div>
+
+          </button>
+
+
+          <!-- INFORMATION -->
+
+          @if (captura.nombre || captura.descripcion) {
+
+            <div class="p-5">
+
+              @if (captura.nombre) {
+
+                <h3
+                  class="font-semibold text-white"
+                >
+                  {{ captura.nombre }}
+                </h3>
+
+              }
+
+
+              @if (captura.descripcion) {
+
+                <p
+                  class="mt-2 text-sm leading-6
+                         text-slate-400"
+                >
+                  {{ captura.descripcion }}
+                </p>
+
+              }
+
+            </div>
+
+          }
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+}
+
+
+<!-- ================================================= -->
+<!-- MODAL -->
+<!-- ================================================= -->
+
+@if (selectedCapture) {
+
+  <div
+    class="fixed inset-0 z-[9999]
+           flex items-center justify-center
+           bg-slate-950/90 p-4
+           backdrop-blur-md sm:p-8"
+    (click)="closeModal()"
+  >
+
+    <!-- CLOSE -->
+
+    <button
+      type="button"
+      aria-label="Cerrar imagen"
+      class="absolute right-5 top-5 z-20
+             flex size-11 items-center
+             justify-center rounded-full
+             border border-white/10
+             bg-slate-900/80 text-slate-300
+             transition hover:bg-white/10
+             hover:text-white"
+      (click)="closeModal()"
+    >
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 6 6 18"/>
+        <path d="m6 6 12 12"/>
+      </svg>
+
+    </button>
+
+
+    <!-- MODAL CONTENT -->
+
+    <div
+      class="flex max-h-[90vh] w-full
+             max-w-6xl flex-col overflow-hidden
+             rounded-2xl border border-white/10
+             bg-slate-950 shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+
+      <!-- IMAGE -->
+
+      <div
+        class="flex min-h-0 flex-1
+               items-center justify-center
+               overflow-auto bg-black/30"
+      >
+
+        <img
+          [src]="selectedCapture.image"
+          [alt]="selectedCapture.nombre ?? 'Captura del proyecto'"
+          class="max-h-[75vh] max-w-full
+                 object-contain"
+        />
+
+      </div>
+
+
+      <!-- INFORMATION -->
+
+      @if (
+        selectedCapture.nombre ||
+        selectedCapture.descripcion
+      ) {
+
+        <div
+          class="border-t border-white/10
+                 bg-slate-950 p-5 sm:p-6"
+        >
+
+          @if (selectedCapture.nombre) {
+
+            <h3
+              class="text-lg font-semibold
+                     text-white"
+            >
+              {{ selectedCapture.nombre }}
+            </h3>
+
+          }
+
+
+          @if (selectedCapture.descripcion) {
+
+            <p
+              class="mt-2 max-w-3xl
+                     text-sm leading-6
+                     text-slate-400"
+            >
+              {{ selectedCapture.descripcion }}
+            </p>
+
+          }
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+}
