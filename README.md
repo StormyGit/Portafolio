@@ -79,9 +79,9 @@ Este portafolio puede ser publicado mediante **Vercel**.
 
 Cuando el sitio esté publicado puedes agregar aquí el enlace:
 
-```text
+
 [Portafolio](https://portafolio-rust-zeta-88.vercel.app/portafolio)
-```
+
 
 ---
 
