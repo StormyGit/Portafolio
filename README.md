@@ -26,14 +26,6 @@ El portafolio incluye información sobre cada proyecto, responsabilidades, tecno
 
 ---
 
-## 🖥️ Vista previa
-
-![Vista previa del portafolio](./public/images/readme/portfolio-preview.png)
-
-> La imagen anterior muestra una vista general del portafolio.
-
----
-
 ## 📂 Proyectos destacados
 
 ### 🎓 Sistema de Gestión de Becas
@@ -80,72 +72,15 @@ Durante el desarrollo del portafolio y de los proyectos presentados he trabajado
 
 ---
 
-## 📁 Estructura principal
-
-```text
-src/
-└── app/
-    ├── components/
-    │   ├── project-card/
-    │   └── project-gallery/
-    │
-    ├── layouts/
-    │   └── layout-app/
-    │
-    ├── pages/
-    │   ├── inicio/
-    │   ├── about-me/
-    │   ├── proyects/
-    │   └── details-proyects/
-    │
-    └── services/
-        └── proyects-services/
-```
-
----
-
-## ⚙️ Ejecutar el proyecto
-
-Clona el repositorio:
-
-```bash
-git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
-```
-
-Ingresa al proyecto:
-
-```bash
-cd TU-REPOSITORIO
-```
-
-Instala las dependencias:
-
-```bash
-npm install
-```
-
-Ejecuta Angular:
-
-```bash
-ng serve
-```
-
-Después abre:
-
-```text
-http://localhost:4200
-```
-
----
 
 ## 🌎 Deploy
 
-Este portafolio puede ser publicado mediante **GitHub Pages**.
+Este portafolio puede ser publicado mediante **Vercel**.
 
 Cuando el sitio esté publicado puedes agregar aquí el enlace:
 
 ```text
-https://TU-USUARIO.github.io/TU-REPOSITORIO/
+(https://portafolio-rust-zeta-88.vercel.app/portafolio)
 ```
 
 ---
