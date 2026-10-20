@@ -1,60 +1,111 @@
-# PortafolioDelc
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+# 👨‍💻 Portafolio | Daniel López
 
-## Development server
+### Desarrollador de Software Full Stack
 
-To start a local development server, run:
+Portafolio personal desarrollado para presentar mi experiencia, proyectos y tecnologías con las que he trabajado en desarrollo web y móvil.
 
-```bash
-ng serve
-```
+<br>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-## Code scaffolding
+</div>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🚀 Sobre este proyecto
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este repositorio contiene mi portafolio personal como desarrollador de software.
 
-```bash
-ng generate --help
-```
+El sitio fue creado para presentar de manera organizada mi experiencia, los proyectos en los que he participado y algunas de las tecnologías que he utilizado durante mi formación y experiencia profesional.
 
-## Building
+El portafolio incluye información sobre cada proyecto, responsabilidades, tecnologías utilizadas y capturas de los sistemas desarrollados.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📂 Proyectos destacados
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 🎓 Sistema de Gestión de Becas
+**DICITH - UNAH**
 
-## Running unit tests
+Plataforma para la gestión y seguimiento de becas académicas en la que participé durante mi práctica profesional.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+### 🌐 Red Social de Celaque
+**SITGLOBALS**
 
-## Running end-to-end tests
+Plataforma web tipo red social orientada a la interacción entre propietarios, inversionistas y negocios.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+### 🚒 Registro de Incidentes CCE
+**Cuerpo de Bomberos de Honduras**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Sistema web y aplicación móvil orientados al registro y seguimiento de incidentes en diferentes regionales del país.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# Portafolio
+## 🛠️ Tecnologías
+
+Durante el desarrollo del portafolio y de los proyectos presentados he trabajado con tecnologías como:
+
+`Angular` · `TypeScript` · `JavaScript` · `Tailwind CSS` · `Ionic` · `Spring Boot` · `Laravel` · `Node.js` · `PostgreSQL` · `MySQL` · `SQL Server` · `Git` · `GitHub` · `APIs REST`
+
+---
+
+## ✨ Funcionalidades del portafolio
+
+- Presentación profesional y sección sobre mí.
+- Listado dinámico de proyectos.
+- Proyectos destacados.
+- Página individual de detalles para cada proyecto.
+- Información sobre responsabilidades y aportes.
+- Tecnologías utilizadas en cada proyecto.
+- Galería de capturas.
+- Visualización de imágenes mediante modal.
+- Diseño responsive.
+- Interfaz desarrollada con Angular y Tailwind CSS.
+
+---
+
+
+## 🌎 Deploy
+
+Este portafolio puede ser publicado mediante **Vercel**.
+
+Cuando el sitio esté publicado puedes agregar aquí el enlace:
+
+
+[Portafolio](https://portafolio-rust-zeta-88.vercel.app/portafolio)
+
+
+---
+
+## 👨‍💻 Sobre mí
+
+Soy **Daniel Enrique López Cruz**, desarrollador de software Full Stack y egresado de Informática Administrativa.
+
+Tengo experiencia participando en proyectos web, aplicaciones móviles, automatización de procesos, APIs REST y sistemas que trabajan con bases de datos relacionales.
+
+Me interesa continuar fortaleciendo mis conocimientos en desarrollo de software, arquitectura y buenas prácticas.
+
+---
+
+## 📫 Contacto
+
+**Daniel López**
+
+📧 dani.cruzlopez2002@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/daniel-lopez-4635603a6)
+
+---
+
+<div align="center">
+
+Desarrollado con Angular + Tailwind CSS.
+
+</div>
