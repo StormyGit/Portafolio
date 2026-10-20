@@ -14,6 +14,7 @@ export interface Project {
   technologies: string[];
   featured?: boolean;
   capturas: Captura[];
+  visible: Boolean;
 }
 
 export interface Captura {
@@ -35,7 +36,7 @@ private projects: Project[] = [
     id: 1,
     name: 'Sistema de Biblioteca',
     company: 'INFOP',
-
+visible: true,
     description:
       'Sistema para la gestión de libros, usuarios, préstamos y emisión de solvencias.',
 
@@ -54,7 +55,7 @@ private projects: Project[] = [
     image: 'images/proyect/bibliotecaInfop_cover.png',
 
     slug: 'biblioteca-infop',
-
+featured: true,
     technologies: [
       'PHP - Laravel',
       'Node.js',
@@ -69,7 +70,7 @@ private projects: Project[] = [
     id: 2,
     name: 'Sistema de Gestión de Becas',
     company: 'DICITH - UNAH',
-
+visible: true,
     description:
       'Plataforma para la gestión y seguimiento de becas académicas desarrollada durante mi práctica profesional.',
 
@@ -141,7 +142,7 @@ private projects: Project[] = [
     id: 3,
     name: 'Red Social de Celaque',
     company: 'SITGLOBALS',
-
+visible: true,
     description:
       'Plataforma web tipo red social orientada a la interacción entre propietarios, inversionistas y negocios.',
 
@@ -212,6 +213,7 @@ private projects: Project[] = [
     id: 4,
     name: 'Automatización de Flujos',
     company: 'SITGLOBALS',
+    visible: true,
 
     description:
       'Solución enfocada en automatizar tareas, formularios y el seguimiento de procesos administrativos.',
@@ -233,6 +235,7 @@ private projects: Project[] = [
     slug: 'automatizacion-icf',
 
     technologies: [
+      'Docker',
       'PHP - Laravel',
       'Spring Boot',
       'MySQL',
@@ -246,7 +249,7 @@ private projects: Project[] = [
     id: 5,
     name: 'Registro de Incidentes CCE',
     company: 'Cuerpo de Bomberos de Honduras',
-
+    visible: false,
     description:
       'Sistema web y aplicación móvil para registrar y dar seguimiento a incidentes en diferentes regionales del país.',
 
@@ -281,27 +284,29 @@ private projects: Project[] = [
 
 
   getProjects(): Project[] {
-    return this.projects;
+    return this.projects.filter(
+      pro => pro.visible
+    );
   }
 
 
   getFeaturedProjects(): Project[] {
     return this.projects.filter(
-      project => project.featured
+      project => project.featured && project.visible
     );
   }
 
 
   getProjectBySlug(slug: string): Project | undefined {
     return this.projects.find(
-      project => project.slug === slug
+      project => project.slug === slug && project.visible
     );
   }
 
   getProjectById(id: number): Project | undefined {
 
     return this.projects.find(
-      project => project.id === id
+      project => project.id === id && project.visible
     );
 
   }
