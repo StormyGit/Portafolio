@@ -249,7 +249,7 @@ visible: true,
     id: 5,
     name: 'Registro de Incidentes CCE',
     company: 'Cuerpo de Bomberos de Honduras',
-    visible: false,
+    visible: true,
     description:
       'Sistema web y aplicación móvil para registrar y dar seguimiento a incidentes en diferentes regionales del país.',
 
